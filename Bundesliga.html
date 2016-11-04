@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Spieltag:</th>
+            <th><input id="wert" type="text"></th>
+            <th><button id="suche">Suchen</button></th>
+        </tr>
+    </table>
+    <table width="30%"  style="text-align:center" id="table1">
+        <tr>
+            <th>
+                Team1
+            </th>
+            <th>
+                Team2
+            </th>
+            <th>
+                Ergebnis
+            </th>
+        </tr>
+    </table>
+    <script>
+        var geturl = function() {
+            var spieltag = $("#wert")[0].value
+            return "http://www.openligadb.de/api/getmatchdata/bl1/2016/" + spieltag
+        }
+        var getEndergebnis = function(match) {
+            var matchresults = match.MatchResults
+            for (var i = 0; i < matchresults.length; i++) {
+                var result = matchresults[i]
+                if (result.ResultName === "Endergebnis") {
+                    return result
+                }
+            }
+            return null
+        }
+        var erstelleZeile = function(match) {
+            var team1 = match.Team1.TeamName
+            var team2 = match.Team2.TeamName
+            var punkteT1 = getEndergebnis(match).PointsTeam1;
+            var punkteT2 = getEndergebnis(match).PointsTeam2;
+            var zeile = $("<tr></tr>")
+            zeile.addClass("deletable")
+            var spalte1 = $("<td></td>")
+            var spalte2 = $("<td></td>")
+            var spalte3 = $("<td></td>")
+            spalte1.append(team1)
+            spalte2.append(team2)
+            spalte3.append(punkteT1 + ":" + punkteT2)
+            zeile.append(spalte1)
+            zeile.append(spalte2)
+            zeile.append(spalte3)
+            $("#table1").append(zeile)
+        }
+        $("#suche").on("click", function() {
+            $(".deletable").remove();
+            $("td").remove();
+            $.ajax({
+                url: geturl()
+            }).then(function(data) {
+                for (var i = 0; i < data.length; i++) {
+                    erstelleZeile(data[i])
+                }
+
+            })
+        });
+    </script>
+</body>
+
+</html>

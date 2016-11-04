@@ -1,0 +1,18 @@
+.margin {
+  margin-left: 10px
+
+
+}
+.selectable.selected{
+  color:#00FF00
+
+}
+.selectable{
+  color:black
+
+}
+table {
+  width: 130%
+
+
+}

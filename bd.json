@@ -1,0 +1,105 @@
+[{
+        "MatchID": 39648,
+        "MatchDateTime": "2016-08-26T20:30:00",
+        "TimeZoneID": "W. Europe Standard Time",
+        "MatchDateTimeUTC": "2016-08-26T18:30:00Z",
+        "Team1": {
+            "TeamId": 40,
+            "TeamName": "Bayern München",
+            "TeamIconUrl": "http://www.openligadb.de/images/teamicons/Bayern_Muenchen.gif"
+        },
+        "Team2": {
+            "TeamId": 134,
+            "TeamName": "Werder Bremen",
+            "TeamIconUrl": "http://www.openligadb.de/images/teamicons/werder_bremen.gif"
+        },
+        "LastUpdateDateTime": "2016-09-19T23:10:36.1",
+        "MatchIsFinished": true,
+        "MatchResults": [
+          {
+            "ResultID": 67922,
+            "ResultName": "Endergebnis",
+            "PointsTeam1": 6,
+            "PointsTeam2": 0,
+            "ResultOrderID": 2,
+            "ResultDescription": "Ergebnis nach Spielende"
+        }, 
+        {
+            "ResultID": 67923,
+            "ResultName": "Halbzeitergebnis",
+            "PointsTeam1": 2,
+            "PointsTeam2": 0,
+            "ResultOrderID": 1,
+            "ResultDescription": "Ergebnis zur Halbzeit"
+        }],
+        "Goals": [{
+            "GoalID": 53203,
+            "ScoreTeam1": 1,
+            "ScoreTeam2": 0,
+            "MatchMinute": 8,
+            "GoalGetterID": 6491,
+            "GoalGetterName": "Xabi Alonso",
+            "IsPenalty": false,
+            "IsOwnGoal": false,
+            "IsOvertime": false,
+            "Comment": ""
+        }, {
+            "GoalID": 53207,
+            "ScoreTeam1": 2,
+            "ScoreTeam2": 0,
+            "MatchMinute": 13,
+            "GoalGetterID": 14563,
+            "GoalGetterName": "Robert Lewandowski",
+            "IsPenalty": false,
+            "IsOwnGoal": false,
+            "IsOvertime": false,
+            "Comment": ""
+        }, {
+            "GoalID": 53211,
+            "ScoreTeam1": 3,
+            "ScoreTeam2": 0,
+            "MatchMinute": 46,
+            "GoalGetterID": 14563,
+            "GoalGetterName": "Robert Lewandowski",
+            "IsPenalty": false,
+            "IsOwnGoal": false,
+            "IsOvertime": false,
+            "Comment": ""
+        }, {
+            "GoalID": 53212,
+            "ScoreTeam1": 4,
+            "ScoreTeam2": 0,
+            "MatchMinute": 66,
+            "GoalGetterID": 16023,
+            "GoalGetterName": "Philipp Lahm",
+            "IsPenalty": false,
+            "IsOwnGoal": false,
+            "IsOvertime": false,
+            "Comment": ""
+        }, {
+            "GoalID": 53215,
+            "ScoreTeam1": 5,
+            "ScoreTeam2": 0,
+            "MatchMinute": 73,
+            "GoalGetterID": 16024,
+            "GoalGetterName": "Frank Ribery",
+            "IsPenalty": false,
+            "IsOwnGoal": false,
+            "IsOvertime": false,
+            "Comment": ""
+        }, {
+            "GoalID": 53220,
+            "ScoreTeam1": 6,
+            "ScoreTeam2": 0,
+            "MatchMinute": 77,
+            "GoalGetterID": 14563,
+            "GoalGetterName": "Robert Lewandowski",
+            "IsPenalty": true,
+            "IsOwnGoal": false,
+            "IsOvertime": false,
+            "Comment": "Elfmeter"
+        }],
+        "Location": {
+            "LocationID": 34,
+            "LocationCity": "München",
+            "LocationStadium": "Allia

@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var ort
+        var text
+        $('button').on("click", function() {
+            var xyz = $("<p> " + text + " </p>")
+            $(ort).closest(".html").append(xyz);
+
+
+
+        })
+
+
+        var div1 = function() {
+            text = "&nbsp&nbsp&nbsp&nbsp&#60div&#62"
+                /*var newElement = document.createElement("p");
+                newElement.innerHTML = "&#60div&#62 &#60/div&#62"
+                document.getElementById(ort).appendChild(newElement)*/
+
+
+        }
+        var div2 = function() {
+            text = "&nbsp&nbsp&nbsp&nbsp&#60/div&#62"
+                /*var newElement = document.createElement("p");
+                newElement.innerHTML = "&#60div&#62 &#60/div&#62"
+                document.getElementById(ort).appendChild(newElement)*/
+
+
+        }
+        var h3 = function() {
+            text = "&nbsp&nbsp&nbsp&nbsp&#60h3&#62 &#60/h3&#62"
+                /*var newElement = document.createElement("p");
+                newElement.innerHTML = "&#60h3&#62 &#60/h3&#62"
+                document.getElementById(ort).appendChild(newElement)*/
+
+
+        }
+        var h4 = function() {
+            text = "&nbsp&nbsp&nbsp&nbsp&#60h4&#62 &#60/h4&#62"
+                /*var newElement = document.createElement("p");
+                newElement.innerHTML = "&#60h4&#62 &#60/h4&#62"
+                document.getElementById(ort).appendChild(newElement)*/
+
+
+        }
+        var p = function() {
+            text = "&nbsp&nbsp&nbsp&nbsp&#60p&#62 &#60/p&#62"
+
+
+
+
+        }
+        var selectElement = function(element) {
+            var liste = document.getElementsByClassName("selectable")
+            for (var i = 0; i < liste.length; i++) {
+                //remove selected class
+                liste[i].className = "selectable"
+            }
+            element.className = "selectable selected"
+            ort = element
+        }
+    </script>
+    <div class="button">
+        <button onclick="div1()" type="button">div</button>
+        <button class="margin" onclick="div2()" type="button">/div</button>
+        <button class="margin" onclick="h3()" type="button">h3</button>
+        <button class="margin" onclick="h4()" type="button">h4</button>
+        <button class="margin" onclick="p()" type="button">p</button>
+    </div>
+    <div class="html">
+        <p>
+            &#60html&#62
+        </p>
+        <p class="selectable" onclick="selectElement(this)">
+            &#60head&#62
+
+        </p>
+        <p>
+            &#60/head&#62
+        </p>
+        <p class="selectable" onclick="selectElement(this)">
+            &#60body&#62
+
+        </p>
+        <p>
+            &#60/body&#62
+        </p>
+        <p>
+            &#60/html&#62
+        </p>
+    </div>
+</body>
+
+</html>
